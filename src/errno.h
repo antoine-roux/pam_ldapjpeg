@@ -1,0 +1,16 @@
+#ifndef __ERRNO_H__
+#define __ERRNO_H__
+
+#define RET_OK			0x00000000
+
+#define LDAP_ERR_INIT		0x00010001
+#define LDAP_ERR_OPTS		0x00010002
+#define LDAP_ERR_TLS		0x00010003
+#define LDAP_ERR_BIND		0x00010004
+
+#define LDAP_ERR_SEARCH		0x00010005
+#define LDAP_ERR_NOVALUE	0x00010006
+
+#define DBUS_ERR_INIT		0x00020001
+
+#endif
