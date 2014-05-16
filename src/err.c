@@ -3,7 +3,7 @@
 int print_error(int err_code)
 {
 	char* err_msg;
-	
+
 	switch (err_code) {
 	case LDAP_ERR_INIT:
 	case LDAP_ERR_OPTS:

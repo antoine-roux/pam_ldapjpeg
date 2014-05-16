@@ -7,9 +7,14 @@
 
 #include "errno.h"
 
+#ifndef LDAP_SERVER
 #define LDAP_SERVER	"ldap://server.lan"
+#endif
 
+#ifndef USER_BASE
 #define USER_BASE	"cn=users,dc=server,dc=lan"
+#endif
+
 #define USER_FILTER	"(&(objectClass=inetOrgPerson)(uid=%s))"
 #define USER_PHOTO	"jpegPhoto"
 

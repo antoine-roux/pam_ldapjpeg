@@ -8,10 +8,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <sys/param.h>
-#include <security/pam_modules.h>
-
 #include <syslog.h>
+//#include <sys/param.h>
+
+#include <security/pam_modules.h>
 #include <security/pam_ext.h>
 
 #define ICON_PATH "/var/lib/AccountsService/icons/%s"
