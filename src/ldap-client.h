@@ -8,11 +8,13 @@
 #include "errno.h"
 
 #ifndef LDAP_SERVER
-#define LDAP_SERVER	"ldap://server.lan"
+#pragma error "You must define LDAP_SERVER"
+//#define LDAP_SERVER	"ldap://server.lan"
 #endif
 
 #ifndef USER_BASE
-#define USER_BASE	"cn=users,dc=server,dc=lan"
+#pragma error "You must define USER_BASE"
+//#define USER_BASE	"cn=users,dc=server,dc=lan"
 #endif
 
 #define USER_FILTER	"(&(objectClass=inetOrgPerson)(uid=%s))"

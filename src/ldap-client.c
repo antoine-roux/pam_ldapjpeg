@@ -5,9 +5,13 @@ int ldapclient_connect(char* uri, LDAP** ret)
 {
 	int version = LDAP_VERSION3;
 	int reqcert = LDAP_OPT_X_TLS_DEMAND;
+	int timeout = 2;
 
         if (ldap_initialize(ret, uri) != LDAP_SUCCESS)
 		return LDAP_ERR_INIT;
+
+	if (ldap_set_option(*ret, LDAP_OPT_NETWORK_TIMEOUT, &timeout) != LDAP_SUCCESS)
+		return LDAP_ERR_OPTS;
 
 	if (ldap_set_option(*ret, LDAP_OPT_PROTOCOL_VERSION, &version) &&
 	    ldap_set_option(*ret, LDAP_OPT_X_TLS_REQUIRE_CERT, &reqcert)
